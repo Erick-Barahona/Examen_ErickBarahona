@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen_ErickBarahona.Views.ListPagoView">
+
+        <StackLayout>
+
+        <Label Text="Listado de Personas" HorizontalOptions="Center" TextColor="Green"></Label>
+        
+
+        <ListView ItemsSource="{Binding ListaPagos1}"  ItemSelected="ListView_ItemSelected" x:Name="lista">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell> 
+                            <StackLayout Orientation="Horizontal">
+                                <Label x:Name="lbId_pago" Text="{Binding Id_pago}"></Label>
+                                <Label x:Name="lbDescripcion" Text="{Binding Descripcion}"></Label>
+                                <Label x:Name="lbMonto" Text="{Binding Monto}"></Label>
+                                <Label x:Name="lbFecha" Text="{Binding Fecha}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="btnEliminar" Text="Eliminar" BackgroundColor="Red" Clicked="btnEliminar_Clicked">
+                
+            </Button>
+            <Button x:Name="btnModificar" Text="Modificar" BackgroundColor="Purple" Clicked="btnModificar_Clicked"></Button>
+                
+    </StackLayout>
+
+
+</ContentPage>
